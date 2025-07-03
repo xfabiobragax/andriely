@@ -111,7 +111,7 @@ def download_csv():
             return jsonify({'error': 'Arquivo de confirmações não encontrado'}), 404
         
         from flask import send_file
-        return send_file(CSV_FILE, as_attachment=True, download_name='confirmacoes_festa_benjamin.csv')
+        return send_file(CSV_FILE, as_attachment=True, download_name='confirmacoes_festa_andriely.csv')
         
     except Exception as e:
         return jsonify({'error': f'Erro ao fazer download: {str(e)}'}), 500
