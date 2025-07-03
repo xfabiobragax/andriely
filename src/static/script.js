@@ -182,16 +182,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         confirmationMessage.textContent = message;
-        modal.style.display = 'block';
+        modal.style.display = 'flex'; // <-- CORREÇÃO APLICADA
         
         // Adiciona animação de entrada
         const modalContent = modal.querySelector('.modal-content');
-        modalContent.style.transform = 'translate(-50%, -50%) scale(0.8)';
+        modalContent.style.transform = 'scale(0.8)'; // <-- CORREÇÃO APLICADA
         modalContent.style.opacity = '0';
         
         setTimeout(() => {
             modalContent.style.transition = 'all 0.3s ease';
-            modalContent.style.transform = 'translate(-50%, -50%) scale(1)';
+            modalContent.style.transform = 'scale(1)'; // <-- CORREÇÃO APLICADA
             modalContent.style.opacity = '1';
         }, 10);
     }
@@ -243,7 +243,7 @@ function closeModal() {
     const modalContent = modal.querySelector('.modal-content');
     
     modalContent.style.transition = 'all 0.3s ease';
-    modalContent.style.transform = 'translate(-50%, -50%) scale(0.8)';
+    modalContent.style.transform = 'scale(0.8)'; // <-- ANIMAÇÃO DE SAÍDA ATUALIZADA
     modalContent.style.opacity = '0';
     
     setTimeout(() => {
@@ -267,7 +267,7 @@ document.addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         const modal = document.getElementById('successModal');
-        if (modal.style.display === 'block') {
+        if (modal.style.display === 'flex') { // <-- ATUALIZADO
             closeModal();
         }
     }
@@ -279,4 +279,3 @@ function viewRSVPs() {
     console.log('RSVPs salvos:', rsvps);
     return rsvps;
 }
-
