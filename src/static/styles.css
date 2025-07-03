@@ -558,6 +558,7 @@ body {
     z-index: 1000;
     align-items: center;
     justify-content: center;
+    padding: 20px; /* Adicionado para garantir espaço nas bordas */
 }
 
 .modal-content {
@@ -566,7 +567,7 @@ body {
     padding: 40px;
     text-align: center;
     max-width: 500px;
-    margin: 20px;
+    margin: 0; /* <-- CORREÇÃO APLICADA */
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     position: relative;
 }
@@ -652,7 +653,7 @@ body {
     }
     
     .modal-content {
-        margin: 10px;
+        /* A margem já foi zerada na regra principal */
         padding: 30px 20px;
     }
 }
@@ -689,4 +690,3 @@ body {
         font-size: 1rem;
     }
 }
-
